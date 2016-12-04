@@ -1,0 +1,34 @@
+extends ../layouts/default
+
+block intro
+	.contact-page-image
+		h1 Get In Touch
+
+	.contact-page-wrap
+		.row
+			.small-12.medium-6.columns
+				.contact-intro-text
+					p I'd love to chat, you can get in touch with me by filling out the form below
+					p You can also contact me directly via:
+					p Phone: (520) 780-4950
+					p Email: johngarcia9110@gmail.com
+					p If you live in NYC I'm always open to grabbing a coffee.
+			if enquirySubmitted
+				h3 Thanks for getting in touch.
+			else
+			.small-12.medium-6.columns
+				form(method='post')
+					input(type='hidden', name='action', value='contact')
+					.form-group(class=validationErrors.name ? 'has-error' : null)
+						label Name
+						input(type='text', name='name.full', value=formData['name.full']).form-control
+					.form-group(class=validationErrors.email ? 'has-error' : null)
+						label Email
+						input(type='email', name='email', value=formData.email).form-control
+					.form-group(class=validationErrors.message ? 'has-error' : null)
+						label Message
+						textarea(name='message', placeholder='Enter your message here' rows=4).form-control= formData.message
+					.form-actions
+					.btn-wrap
+						button.btn-intro.light-button.hover-button(type='submit') Send
+						.hover-button-shadow

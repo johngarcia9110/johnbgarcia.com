@@ -1,0 +1,15 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "45.55.167.3",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "root",
+  "password": "Brandon213!",
+  "watch": [],
+  "transport": "scp",
+  "target": "/root/portfolio"
+}

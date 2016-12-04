@@ -1,0 +1,30 @@
+extends ../layouts/default
+
+block intro
+	.post-page-image
+		.row
+			h1= data.post.title
+	.row.post-row
+		article
+		if data.post.categories[0].key == 'working-with-apis'
+			.small-12.large-12.columns#post-image-column
+			if data.post.image.exists
+				.post-image-top.show-for-large-up
+					img(src=data.post.postPageImageUrl).img-responsive
+					if data.post.secondPageImageUrl
+						img(src=data.post.secondPageImageUrl).img-responsive.second-image
+			.small-12.large-12.columns.post-text-bottom
+				.post.medium-text
+					p: a.button-standard.light-button(href='/blog') &larr; Back
+					!= data.post.content.full
+		else
+			.small-12.large-6.columns
+				.post.medium-text
+					p: a.button-standard.light-button(href='/blog') &larr; Back
+					!= data.post.content.full
+			.small-12.large-6.columns#post-image-column
+				.post-image.show-for-large-up
+					if data.post.image.exists
+						img(src=data.post.postPageImageUrl).img-responsive
+						if data.post.secondPageImageUrl
+							img(src=data.post.secondPageImageUrl).img-responsive.second-image

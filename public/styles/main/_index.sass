@@ -1,0 +1,185 @@
+#jumbotron
+  font-family: $main-font
+  color: $white
+  text-align: center
+  padding-top: 40vh
+  width: 100%
+  position: relative
+  overflow: hidden
+  .jumbo-text
+    text-align: left
+    h1
+      font-size: 2.5em
+      font-family: $main-font
+      font-weight: bold
+      display: inline-block
+    p
+      font-size: 1em
+      margin-bottom: 0
+    ul
+      margin: 0 0 3em 0
+      float: left
+      display: block
+      width: 100%
+  .social-list
+    li
+      display: inline-block
+      float: left
+      margin: 5px 16px
+      &:first-child
+        margin-left: 0
+      a
+        color: $white
+        font-size: 2em
+
+#overview
+  .overview-content
+    background: $blue
+  .intro
+    padding: 40px
+    row
+      padding: 40px 0 120px 0
+      background: transparent
+      text-align: center
+      .into-text
+        text-align: center
+        margin: auto
+    h3
+      text-align: center
+      font-size: 30px
+
+  .details-section
+    height: 400px
+    box-shadow: 0px -32px 32px -32px #093248
+    .contact
+      position: relative
+      overflow: hidden
+      padding: 0
+      height: 100%
+      background: url(/images/location-map1.jpg)
+      background-repeat: no-repeat
+      background-size: cover
+      img
+        height: 100%
+      .contact-me
+        height: 50%
+        width: 50%
+        position: absolute
+        left: 0
+        bottom: 0
+        background: #ffffff
+    .projects
+      height: 100%
+      padding: 0
+    .project-more
+      height: 50%
+      width: 50%
+      float: left
+
+    .more-btn
+      position: relative
+      background: #FFFFFF
+      box-shadow: 0 0 50px $blue
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      font-size: .8em
+      cursor: pointer
+      &:hover
+        animation-name: pop
+        animation-duration: 200ms
+        animation-fill-mode: forwards
+      p
+        color: $blue
+        font-weight: bold
+        text-align: center
+        margin-bottom: 0
+        cursor: pointer
+        i
+          padding: 20px
+          border-radius: 50%
+          border: 5px solid $blue
+          margin-bottom: 15px
+          cursor: pointer
+  .project-image-overlay
+    height: 50%
+    width: 50%
+    float: left
+    background: #f6f0ef
+    .project-image
+      width: 100%
+      height: 100%
+      opacity: .6
+      background-size: cover
+      background-repeat: no-repeat
+#details-image-1
+  background-image: url('/images/home-thumbs/military.jpg')
+#details-image-2
+  background-image: url('/images/home-thumbs/theMixedPalette.jpg')
+#details-image-3
+  background-image: url('/images/home-thumbs/gratia.jpg')
+
+#canvas
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -2
+.is-open-right #jumbotron svg
+  visibility: hidden
+#jumbotron
+  svg
+    max-width: 300px
+    height: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -380px 0 0 -150px
+    z-index: -1
+
+#triRight
+  animation: float 3.1s ease-in-out forwards
+  animation-iteration-count: infinite
+  box-shadow: 10px 10px 10px 10px black
+#triRightSmall
+  animation: float 3.2s ease-in-out forwards
+  animation-iteration-count: infinite
+#triLeft
+  animation: float 3.1s ease-in-out forwards
+  animation-iteration-count: infinite
+#triLeftSmall
+  animation: float 3.4s ease-in-out forwards
+  animation-iteration-count: infinite
+#triMid
+  animation: float 2.2s ease-in-out forwards
+  animation-iteration-count: infinite
+#mouse
+  transform-origin: top
+  animation: mouse-float 3s ease-in-out
+  animation-iteration-count: infinite
+#triMain
+  animation: float 3s ease-in-out forwards
+  animation-iteration-count: infinite
+
+#computer, #screen
+  animation: float 3s ease-in-out
+  animation-iteration-count: infinite
+#screen
+  fill: #g300
+
+@keyframes mouse-float
+  0%
+    transform: translateY(0px) rotate(-2deg)
+  50%
+    transform: translateY(10px) rotate(2deg)
+  100%
+    transform: translateY(0px) rotate(-2deg)
+
+@keyframes float
+  0%
+    transform: translateY(0px)
+  50%
+    transform: translateY(10px)
+  100%
+    transform: translateY(0px)

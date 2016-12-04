@@ -1,0 +1,135 @@
+$blue: #0d6c81
+$black: #000F08
+$white: #CCDBDC
+$light-teal: #9AD1D4
+$teal: #80CED7
+$main-font: 'Montserrat', sans-serif
+
+body
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,15,8,1)), color-stop(100%, rgba(11,57,84,1)))
+  font-size: 30px
+  color: $white
+  position: relative
+
+.roboto
+  font-family: 'Roboto', sans-serif
+
+.dark-text
+  color: #0f233e
+
+.small-text
+  font-size: 16px
+
+.medium-text
+  font-size: 18px
+
+.larger-text
+  font-size: 20px
+
+h1, h2, h3, h4, p, a
+    font-family: $main-font
+
+a
+  color: $blue
+  &:hover
+    color: darken($blue, 10%)
+
+.off-canvas-content
+  background: transparent
+  box-shadow: none
+  overflow: hidden
+  min-height: 100vh
+
+.off-canvas-wrapper
+  height: 100%
+
+.js-off-canvas-exit
+  z-index: 99999999
+.main-background
+  background: #0f233e
+
+.button
+  background: $blue
+  &:hover
+    background: darken($blue, 10%)
+
+.resume-button
+  color: $blue
+  padding: 10px
+  background: $white
+  &:hover
+    color: $blue
+
+.btn-wrap
+  position: relative
+  display: block
+  height: 125px
+  max-width: 250px
+  margin: auto
+  padding: 20px
+
+
+.hover-button
+  box-shadow: 0 2px 0 #072937
+  display: block
+  animation: hovering 3s ease-in-out forwards
+  animation-iteration-count: infinite
+  transition: transform 500ms forwards
+  &:hover
+    color: white
+
+
+@keyframes hovering
+  0%
+    transform: translateY(0px)
+  50%
+    transform: translateY(10px)
+
+.hover-button-shadow
+  display: block
+  width: 20%
+  height: 0px
+  position: absolute
+  bottom: 15px
+  left: 0
+  right: 0
+  margin: auto
+  background: #031a1c
+  border-radius: 50%
+  animation: follow-bounce 3s ease-in-out forwards
+  animation-iteration-count: infinite
+
+@keyframes follow-bounce
+  0%
+    width: 1%
+    height: 2px
+    opacity: .1
+  50%
+    width: 60%
+    height: 6px
+    opacity: 0.3
+  100%
+    width: 1%
+    height: 0px
+    opacity: 0
+
+.light-button
+  color: $white
+  background: #32566b
+
+.button-standard
+  padding: 10px
+  &:hover
+    color: $light-teal
+
+.btn
+  display: block
+  text-align: center
+  max-width: 300px
+
+
+.btn-intro
+  padding: 10px 15px
+  border-radius: 5px
+  margin: auto
+  border-bottom: 4px solid #072937

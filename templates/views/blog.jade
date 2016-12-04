@@ -1,0 +1,48 @@
+extends ../layouts/default
+
+
+
+block intro
+	.projects-page-image
+		h1= data.category ? data.category.name : 'Projects'
+
+block content
+	.row
+		.section-title
+			i.fa.fa-paint-brush.section-title-icon
+			h2.text-center Design Projects
+		each post in data.posts.results
+			if post.categories[0].key == 'design-projects'
+				.card.small-12.medium-6.large-6.columns
+					.project-item
+						.project-header
+							.img-wrapper
+								.p-preview-image(style="background-image: url('#{post.image.url}')")
+							h2 #{post.title}
+							a(href="/blog/post/#{post.slug}").view-p-link View Project
+	.row
+		.section-title
+			i.fa.fa-cogs.section-title-icon
+			h2.text-center Working With APIs
+		each post in data.posts.results
+			if post.categories[0].key == 'working-with-apis'
+				.card.small-12.medium-6.large-6.columns
+					.project-item
+						.project-header
+							.img-wrapper
+								.p-preview-image(style="background-image: url('#{post.image.url}')")
+							h2 #{post.title}
+							a(href="/blog/post/#{post.slug}").view-p-link View Project
+	.row
+		.section-title
+			i.fa.fa-random.section-title-icon
+			h2.text-center Other Projects
+		each post in data.posts.results
+			if post.categories[0].key == 'other'
+				.card.small-12.medium-6.large-6.columns
+					.project-item
+						.project-header
+							.img-wrapper
+								.p-preview-image(style="background-image: url('#{post.image.url}')")
+							h2 #{post.title}
+							a(href="/blog/post/#{post.slug}").view-p-link View Info

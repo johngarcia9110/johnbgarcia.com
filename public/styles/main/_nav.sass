@@ -1,0 +1,74 @@
+.dark
+  background: #0f233e
+  transition: background 500ms
+
+.title-bar
+  background: transparent
+  .logo
+    width: 80px
+    margin: 10px
+    transition: width 500ms
+  .title-bar-right
+    button
+      font-size: 40px
+      margin: 10px
+      color: $blue
+      transition: margin 500ms
+      text-shadow: 0px 2px 0px #031b1e
+
+.nav-wrapper
+  position: fixed
+  width: 100%
+  z-index: 20
+
+// off canvas nav
+#offCanvasRight
+  height: 100%
+  background: #0f233e
+  h2
+    font-family: $main-font
+    text-align: center
+    font-weight: bold
+  img
+    border-radius: 50%
+    display: block
+    max-width: 150px
+    margin: 10px auto
+  .nav-links
+    text-align: center
+    margin: 0
+    li
+      a
+        color: white
+        font-weight: bold
+    .social-list
+      list-style: none
+      &::after
+        clear: both
+      li
+        display: inline-block
+        float: none
+        margin: 0 5px
+        &:first-child
+          margin-left: 0px
+        a
+          font-size: 1em
+    .menu.vertical
+      li
+        background: $blue
+        max-width: 80%
+        margin: 10px auto
+      .active a
+        background: darken($blue, 10%)
+
+//-------------------------------------------------------------
+//Nav On Scroll Styles
+//-------------------------------------------------------------
+
+.light-nav
+  background: rgba(204, 219, 220, 0.85)
+  .logo
+    width: 60px
+  .title-bar-right
+    button
+      margin: 10px
