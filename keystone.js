@@ -19,7 +19,7 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 	'host': '45.55.167.3',
-	'port': 80,
+	'port': 3000,
 
 	'emails': 'templates/emails',
 
@@ -27,6 +27,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
 	'wysiwyg override toolbar': false,
 	'wysiwyg menubar': true,
 	'wysiwyg skin': 'lightgray',
@@ -37,7 +38,17 @@ keystone.init({
  + ' autolink, autosave, charmap, contextmenu, '
  + ' directionality, emoticons, fullpage, hr, media, pagebreak,'
  + ' paste, preview, print, searchreplace, textcolor,'
- + ' visualblocks, visualchars, wordcount, spellchecker'
+ + ' visualblocks, visualchars, wordcount, spellchecker',
+
+	// port: process.env.PORT,
+	// 'ssl port': process.env.SSLPORT,
+	// ssl: 'force',
+	// letsencrypt: (process.env.NODE_ENV === 'production') && {
+	// 	email: 'johngarcia9110@gmail.com',
+	// 	domains: ['www.johnbgarcia.com', 'johnbgarcia.com'],
+	// 	register: true,
+	// 	tos: true,
+	// },
 });
 
 // Load your project's Models
